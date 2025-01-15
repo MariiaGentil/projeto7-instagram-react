@@ -16,10 +16,10 @@ export default function Sidebar() {
         status: 'Segue você'
     }]
     return (
-        <div class="sidebar">
+        <div className="sidebar">
             <InfoUsuario user='catanacomics' />
-            <div class="sugestoes">
-                <div class="titulo">
+            <div className="sugestoes">
+                <div className="titulo">
                     Sugestões para você
                     <div>Ver tudo</div>
                 </div>
@@ -27,11 +27,11 @@ export default function Sidebar() {
                     return (<Sugestao name={element.name} status={element.status} />)
                 })}
             </div>
-            <div class="links">
+            <div className="links">
                 Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
             </div>
 
-            <div class="copyright">
+            <div className="copyright">
                 © 2021 INSTAGRAM DO FACEBOOK
             </div>
         </div>
@@ -41,9 +41,9 @@ export default function Sidebar() {
 function InfoUsuario({ user }) {
     let imgUser = `src/assets/img/${user}.svg`
     return (
-        <div class="usuario">
+        <div className="usuario">
             <img src={imgUser} />
-            <div class="texto">
+            <div className="texto">
                 <strong>{user}</strong>
                 Catana
             </div>
@@ -55,16 +55,16 @@ function Sugestao(props) {
     const {name, status} = props
     let imgSugestoes = `src/assets/img/${name}.svg`
     return (
-        <div class="sugestao">
-            <div class="usuario">
+        <div className="sugestao">
+            <div className="usuario">
                 <img src={imgSugestoes} />
-                <div class="texto">
-                    <div class="nome">{name}</div>
-                    <div class="razao">{status}</div>
+                <div className="texto">
+                    <div className="nome">{name}</div>
+                    <div className="razao">{status}</div>
                 </div>
             </div>
 
-            <div class="seguir">Seguir</div>
+            <div className="seguir">Seguir</div>
         </div>
     )
 }

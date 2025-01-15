@@ -24,23 +24,23 @@ function Post(props) {
     let imagemPost = `src/assets/img/${imgPost}.svg`
     let imgCurtida = `src/assets/img/${nameCurtidas}.svg`
 
-    return (<div class="post">
-        <div class="topo">
-            <div class="usuario">
+    return (<div className="post">
+        <div className="topo">
+            <div className="usuario">
                 <img src={imgUser} />
                 {name}
             </div>
-            <div class="acoes">
+            <div className="acoes">
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
         </div>
 
-        <div class="conteudo">
+        <div className="conteudo">
             <img src={imagemPost} />
         </div>
 
-        <div class="fundo">
-            <div class="acoes">
+        <div className="fundo">
+            <div className="acoes">
                 <div>
                     <ion-icon name="heart-outline"></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
@@ -51,9 +51,9 @@ function Post(props) {
                 </div>
             </div>
 
-            <div class="curtidas">
+            <div className="curtidas">
                 <img src={imgCurtida} />
-                <div class="texto">
+                <div className="texto">
                     Curtido por <strong>{nameCurtidas}</strong> e <strong>outras {numeroCurtidas} pessoas</strong>
                 </div>
             </div>
